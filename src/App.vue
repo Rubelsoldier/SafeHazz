@@ -1,4 +1,8 @@
+<script setup>
+  import Navbar from '@/components/Navbar.vue';
+</script>
+
 <template>
-  Rana, thank god!
-  It's alright ~
+  <Navbar />
+  <RouterView />
 </template>

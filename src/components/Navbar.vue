@@ -38,9 +38,9 @@ const isActiveLink = (routePath) => {
                 >Home</RouterLink
               >
               <RouterLink
-                to="/jobs"
+                to="/about"
                 :class="[
-                  isActiveLink('/jobs')
+                  isActiveLink('/about')
                     ? 'bg-green-900'
                     : 'hover:bg-gray-900 hover:text-white',
                   'text-white',
@@ -48,9 +48,9 @@ const isActiveLink = (routePath) => {
                   'py-2',
                   'rounded-md',
                 ]"
-                >Jobs</RouterLink
+                >About</RouterLink
               >
-              <RouterLink
+              <!-- <RouterLink
                 to="/jobs/add"
                 :class="[
                   isActiveLink('/jobs/add')
@@ -61,8 +61,8 @@ const isActiveLink = (routePath) => {
                   'py-2',
                   'rounded-md',
                 ]"
-                >Add Job</RouterLink
-              >
+                >Add Job</RouterLink 
+              > -->
             </div>
           </div>
         </div>
