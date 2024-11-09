@@ -2,6 +2,11 @@
   import Programs from '@/components/Programs.vue';
 </script>
 
-<template>  
-  <Programs />
+<template>
+    <Programs />
 </template>
+  
+  <style>
+  
+  </style>
+  
