@@ -11,6 +11,14 @@ import PaceYourself from '@/views/Programs/PaceYourself.vue'
 import VolunteerMatch from '@/views/Programs/VolunteerMatch.vue'
 import CalmZones from '@/views/Programs/CalmZones.vue'
 import CommunitySupport from '@/views/Programs/CommunitySupport.vue'
+import SpiritualPreparation from '@/views/Programs/SpiritualPreparation.vue'
+import IncreasePrayerView from '@/views/Spirituals/IncreasePrayerView.vue'
+import RitualView from '@/views/Programs/RitualView.vue'
+import RepentenceView from '@/views/Spirituals/RepentenceView.vue'
+import CharityView from '@/views/Spirituals/CharityView.vue'
+import SupplicationView from '@/views/Spirituals/SupplicationView.vue'
+
+
 
 
 const router = createRouter({
@@ -39,6 +47,16 @@ const router = createRouter({
       path: '/programs/physical',
       name: 'programs-physical',
       component: PhysicalProgram
+    },
+    {
+      path: '/programs/spiritual',
+      name: 'programs-spiritual',
+      component: SpiritualPreparation
+    },
+    {
+      path: '/programs/ritual',
+      name: 'programs-ritual',
+      component: RitualView
     },
     {
       path: '/programs/virtual',
@@ -80,6 +98,28 @@ const router = createRouter({
       name: 'programs-community-support',
       component: CommunitySupport
     },
+    {
+      path: '/spiritual/increase-prayer',
+      name: 'spiritual-increase-prayer',
+      component: IncreasePrayerView
+    },
+    {
+      path: '/spiritual/repentence',
+      name: 'spiritual-repentence',
+      component: RepentenceView
+    },
+    {
+      path: '/spiritual/charity',
+      name: 'spiritual-charity',
+      component: CharityView
+    },
+    {
+      path: '/spiritual/supplication',
+      name: 'spiritual-supplication',
+      component: SupplicationView
+    },
+
+
   ]
 })
 

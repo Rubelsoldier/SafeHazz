@@ -5,6 +5,7 @@
 <template>
   <div class="container mx-auto xl:max-w-screen-xl">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 m-4 justify-items-center">
+
       <RouterLink
         to="/programs/physical"
         :class="[
@@ -18,7 +19,37 @@
           <p class="text-xl text-green-400">Physical preparation</p>
         </div>
         <span class="text-sm text-green-200">Pre Workout and suggestions</span>
-      </RouterLink>      
+      </RouterLink>
+
+      <RouterLink
+        to="/programs/spiritual"
+        :class="[
+          'bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-900',
+          'p-4',
+          'w-40',
+          'text-center'
+        ]"
+      >
+        <div class="flex flex-col items-center">
+          <p class="text-xl text-green-400">Spirutual preparation</p>
+        </div>
+        <span class="text-sm text-green-200">Meditation, Quran recition, Knowing prophets lifestyles</span>
+      </RouterLink>
+      
+      <RouterLink
+        to="/programs/ritual"
+        :class="[
+          'bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-900',
+          'p-4',
+          'w-40',
+          'text-center'
+        ]"
+      >
+        <div class="flex flex-col items-center">
+          <p class="text-xl text-green-400">Ritual Guide</p>
+        </div>
+        <span class="text-sm text-green-200">Pre Workout and suggestions</span>
+      </RouterLink>
 
       <RouterLink
         to="/programs/etiquette"

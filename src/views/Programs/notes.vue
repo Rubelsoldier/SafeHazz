@@ -32,6 +32,10 @@ marriage ceremonies
 
 social media evolves from here 
 
+business opportunity of selling products 
+
+
+
 
 
 

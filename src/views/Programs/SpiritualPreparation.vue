@@ -1,11 +1,12 @@
 <script setup>
-  import { useRouter } from 'vue-router';
+  import { RouterLink,useRouter } from 'vue-router';
   import BackButton from '@/components/BackButton.vue';
     // back button 
     const router = useRouter();
     const goBack = () => {
     router.back();
     };
+
 </script>
 
 <template>
@@ -14,52 +15,76 @@
             @backClick="goBack" 
             class="mt-4"
         />
-        <h1 class="text-center text-2xl mt-4">Physical Preparation </h1>
+        <h1 class="text-center text-2xl mt-4">Spiritual Preparation </h1>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">
             <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg p-4">                
+            <RouterLink
+                to="/spiritual/increase-prayer"
+                class="bg-white rounded-lg shadow-lg p-4">                
                 <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Walking and Stamina-Building</h3>
-                    <!-- <p class="text-sm text-gray-600 mt-2">Starts with light walks and increases intensity over time,
-                        preparing muscles for long days of walking.
-                    </p> -->
-                </div>                
+                    <h3 class="text-lg font-semibold  text-gray-800">Increase in Prayer and Supplication (Dua)</h3>
+                                    </div>                
                 <div class="relative h-40 w-full mt-4">
-                    <img src="@/assets/img/physical/animated.gif" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                    <img src="@/assets/img/spiritual/increase-prayer.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
                 </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
+            </RouterLink>
+            <RouterLink 
+                to="/spiritual/repentence"
+                class="bg-white rounded-lg shadow-lg p-4">
                 <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Strength and Endurance Exercises</h3>
-                    <!-- <p class="text-sm text-gray-600 mt-2"> Short, guided routines focused on leg and core strength
-                        (e.g., squats, lunges, and core exercises) with low-impact variations for different fitness
-                        levels.
-                    </p> -->
+                    <h3 class="text-lg font-semibold  text-gray-800">Repentance and Seeking Forgiveness</h3>
                 </div>
                 <div class="relative h-40 w-full mt-4">
-                    <img src="@/assets/img/physical/squat-core-lungs.gif" alt="gif image" class="w-full h-full object-cover rounded-lg" />                    
+                    <img src="@/assets/img/spiritual/forgiveness.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
                 </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
+            </RouterLink>
+            <RouterLink 
+                to="/spiritual/charity"
+                class="bg-white rounded-lg shadow-lg p-4">
                 <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Sun Protection and Hydration Education</h3>
-                    <!-- <p class="text-sm text-gray-600 mt-2">Interactive guides on hydration goals, choosing breathable
-                        clothing, and timing activities to avoid peak sun hours.
-                    </p> -->
-                </div>
-                <div class="relative h-40 w-full mt-4">
-                    <img src="@/assets/img/physical/hydration-sun-protection.gif" alt="gif image" class="w-full h-full object-cover rounded-lg" />
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Nutrition Tips for the Weeks Before Hajj</h3>
-                    <!-- <p class="text-sm text-gray-600 mt-2">Suggestions on foods, hydration strategies, and tips for energy maintenance.
-                    </p> -->
-                </div>
+                    <h3 class="text-lg font-semibold  text-gray-800">Practice Gratitude and Charity</h3>
+                                    </div>
                 
                 <div class="relative h-40 w-full mt-4">
-                    <img src="@/assets/img/physical/nutrition.gif" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                    <img src="@/assets/img/spiritual/charity.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </RouterLink>
+            <RouterLink 
+                to="/spiritual/supplication"
+                class="bg-white rounded-lg shadow-lg p-4">
+                <div>
+                    <h3 class="text-lg font-semibold  text-gray-800">Memorize and Practice Hajj-Related Duas and Quranic Verses</h3>
+                                    </div>
+                
+                <div class="relative h-40 w-full mt-4">
+                    <img src="@/assets/img/spiritual/recite quran.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </RouterLink>
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div>
+                    <h3 class="text-lg font-semibold  text-gray-800">Engage in Fasting and Extra Worship</h3>
+                                    </div>
+                
+                <div class="relative h-40 w-full mt-4">
+                    <img src="@/assets/img/spiritual/extra-prayers.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div>
+                    <h3 class="text-lg font-semibold  text-gray-800">Reflect on the Purpose of Hajj and Set Intentions</h3>
+                                    </div>
+                
+                <div class="relative h-40 w-full mt-4">
+                    <img src="@/assets/img/spiritual/purposeofhazz.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-4">
+                <div>
+                    <h3 class="text-lg font-semibold  text-gray-800">Study the Life of Prophet Muhammad (PBUH)</h3>
+                                    </div>
+                
+                <div class="relative h-40 w-full mt-4">
+                    <img src="@/assets/img/spiritual/prophet.jpg" alt="gif image" class="w-full h-full object-cover rounded-lg" />
                 </div>
             </div>
 
@@ -238,7 +263,7 @@
             </div>
         -->
 
-
+        
             <!-- Repeat similar structure for other cards -->
         </div>
     </div>
