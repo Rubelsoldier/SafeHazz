@@ -34,6 +34,7 @@ social media evolves from here
 
 business opportunity of selling products 
 
+******************* pta token github is exposed publickly *************
 
 
 
