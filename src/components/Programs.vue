@@ -161,9 +161,9 @@
         ]"
       >
         <div class="flex flex-col items-center">
-            <p class="text-xl text-green-400">Pilgrim FAQ with Visual Aids and Interactive Chatbot</p>
+            <p class="text-xl text-green-400">Pilgrim FAQ'S</p>
         </div>
-        <span class="text-sm text-green-200">An FAQ covering everything from the rituals to common issues (like handling blisters), with a chatbot for answering real-time questions and providing location-specific tips.</span>
+        <span class="text-sm text-green-200">With Visual Aids and Interactive Chatbot in real-time</span>
       </RouterLink>
       <RouterLink
         to="/programs"
@@ -179,7 +179,8 @@
         </div>
         <span class="text-sm text-green-200">Allows users to create a personalized schedule for each day</span>
       </RouterLink>
-      <RouterLink
+
+      <!-- <RouterLink
         to="/programs"
         :class="[
           'bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-900',
@@ -192,7 +193,8 @@
             <p class="text-xl text-green-400">Arabic Pronunciation Helper for Common Phrases</p>
         </div>
         <span class="text-sm text-green-200">Visual Aids and Interactive Chatbot</span>
-      </RouterLink>
+      </RouterLink> -->
+      
       <RouterLink
         to="/programs"
         :class="[
