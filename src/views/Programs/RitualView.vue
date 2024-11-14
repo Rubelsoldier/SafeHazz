@@ -1,14 +1,24 @@
 <script setup>
-
+  import { useRouter } from 'vue-router';
+  import BackButton from '@/components/BackButton.vue';
+    // back button 
+    const router = useRouter();
+    const goBack = () => {
+    router.back();
+    };
 </script>
 
 <template>
+    <BackButton 
+        @backClick="goBack" 
+        class="mt-4"
+    />
     <h1 class="text-center text-2xl mt-4">Ritual Guide for Hajj</h1>
     <div class="container mx-auto p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/1-hajj-steps.jpg" alt="Ihram illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/1-hajj-steps.jpg" alt="Ihram illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <!-- Icon for visual enhancement -->
                 <div class="flex items-center mb-4">
@@ -27,7 +37,7 @@
         <!-- Tawaf Card -->
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/2-hajj-steps.jpg" alt="Tawaf illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/2-hajj-steps.jpg" alt="Tawaf illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">2. Tawaf (Circumambulation of the Kaaba)</h3>
                 <p class="text-sm text-gray-600 mb-4">Circle the Kaaba to signify unity and devotion.</p>
@@ -45,7 +55,7 @@
         <!-- Sa’i Card -->
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/3-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/3-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">3. Sa’i (Walking between Safa and Marwah)</h3>
                 <p class="text-sm text-gray-600 mb-4">Retrace Hajar’s steps between the two hills.</p>
@@ -61,7 +71,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/4-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/4-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">4. Standing at Arafat (Wuquf)</h3>
                 <p class="text-sm text-gray-600 mb-4">The pinnacle of Hajj, standing in prayer and reflection.</p>
@@ -78,7 +88,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/5-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/5-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">5. Muzdalifah – Collecting Pebbles</h3>
                 <p class="text-sm text-gray-600 mb-4">Spend the night under the open sky and gather pebbles for the
@@ -96,7 +106,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/6-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/6-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">6. Rami al-Jamarat (Stoning the Pillars)</h3>
                 <p class="text-sm text-gray-600 mb-4">Symbolic rejection of evil by throwing pebbles.</p>
@@ -113,7 +123,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/7-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/7-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">7. Sacrifice (Qurbani)</h3>
                 <p class="text-sm text-gray-600 mb-4">Commemorating the sacrifice of Prophet Ibrahim (AS).</p>
@@ -130,7 +140,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/8-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/8-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">8. Tawaf al-Ifadah (Main Tawaf)</h3>
                 <p class="text-sm text-gray-600 mb-4">Symbolizes renewal and the completion of Hajj.</p>
@@ -147,7 +157,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/4-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/4-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">9. Shaving or Trimming Hair (Tahalul)</h3>
                 <p class="text-sm text-gray-600 mb-4">Represents purification and the beginning of a new chapter.</p>
@@ -162,7 +172,7 @@
 
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
-            <img src="@/assets/img/ritual/2-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 object-cover">
+            <img src="@/assets/img/ritual/2-hajj-steps.jpg" alt="Sa'i illustration" class="w-full h-40 cover">
             <div class="p-6">
                 <h3 class="text-2xl font-semibold text-indigo-800">10. Farewell Tawaf (Tawaf al-Wada)</h3>
                 <p class="text-sm text-gray-600 mb-4">A final farewell to the Holy Kaaba.</p>

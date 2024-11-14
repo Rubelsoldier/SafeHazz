@@ -1,8 +1,18 @@
 <script setup>
-
+  import { useRouter } from 'vue-router';
+  import BackButton from '@/components/BackButton.vue';
+    // back button 
+    const router = useRouter();
+    const goBack = () => {
+    router.back();
+    };
 </script>
 
 <template>
+    <BackButton 
+        @backClick="goBack" 
+        class="mt-4"
+    />
     <h1 class="text-center text-2xl mt-4">Cultural Etiquette</h1>
     <div class="container mx-auto p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
 
