@@ -1,225 +1,111 @@
 <script setup>
-import { ref, computed } from 'vue';
+import Image1 from "@/assets/img/green/1.jpg";
+import Image2 from "@/assets/img/green/2.png";
+import Image3 from "@/assets/img/green/3.png";
+import Image4 from "@/assets/img/green/4.png";
+import Image5 from "@/assets/img/green/5.png";
+import Image6 from "@/assets/img/green/6.png";
+import Image7 from "@/assets/img/green/7.png";
 
-// Sample images array
-const images = [
-    'https://via.placeholder.com/150/1',
-    'https://via.placeholder.com/150/2',
-    'https://via.placeholder.com/150/3'
-]
-
-// Reactive state for the current slide index
-const currentIndex = ref(0)
-
-// Computed property to get the current image
-const currentImage = computed(() => images[currentIndex.value])
-
-// Method to go to the next slide
-const nextSlide = () => {
-    currentIndex.value = (currentIndex.value + 1) % images.length
-}
-
-// Method to go to the previous slide
-const prevSlide = () => {
-    currentIndex.value = (currentIndex.value - 1 + images.length) % images.length
-}
-
+const steps = [
+  {         
+    img: Image1,
+    title: "Reusable Water Bottle",
+    description: "Carry a reusable water bottle and use refill stations to reduce plastic waste.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-blue-500'><path stroke-linecap='round' stroke-linejoin='round' d='M12 4.5v15m0 0-3-3m3 3 3-3m0-12.75v15M3 7.5h18m-4.5 0h-9M3 16.5h18'/></svg>",
+    goal: "Reduce plastic waste",
+    tip: "Refill at water stations instead of buying bottled water.",
+    action: "Bring a durable, reusable water bottle."
+  },
+  {
+    img: Image2,
+    title: "Eco-Friendly Packing",
+    description: "Pack essentials in biodegradable containers, avoiding single-use plastics.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-green-500'><path stroke-linecap='round' stroke-linejoin='round' d='M3.75 8.25v8.25m16.5-8.25v8.25m-8.25 0L12 20.25 3.75 18m12.75 0L12 20.25l8.25-2.25m0-12H6a1.5 1.5 0 0 0-1.5 1.5v9c0 .83.67 1.5 1.5 1.5h12a1.5 1.5 0 0 0 1.5-1.5v-9a1.5 1.5 0 0 0-1.5-1.5z'/></svg>",
+    goal: "Reduce single-use plastic waste",
+    tip: "Use cloth bags and biodegradable containers for packing.",
+    action: "Pack essentials in reusable containers."
+  },
+  {
+    img: Image3,    
+    title: "Waste Disposal",
+    description: "Dispose of waste responsibly in designated bins to keep sacred areas clean.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-gray-600'><path stroke-linecap='round' stroke-linejoin='round' d='M3 9.75h18m-5.25 0v10.5a1.5 1.5 0 0 1-1.5 1.5H8.25a1.5 1.5 0 0 1-1.5-1.5V9.75M14.25 4.5h-4.5a1.5 1.5 0 0 0-1.5 1.5v1.5h7.5V6a1.5 1.5 0 0 0-1.5-1.5z'/></svg>",
+    goal: "Keep the area clean and respectful",
+    tip: "Separate and dispose of recyclables and non-recyclables properly.",
+    action: "Dispose of waste in designated bins."
+  },
+  {
+    img: Image4,    
+    title: "Shared Transport",
+    description: "Use group transport options to reduce carbon emissions and traffic.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-yellow-500'><path stroke-linecap='round' stroke-linejoin='round' d='M3 6.75V18a2.25 2.25 0 0 0 2.25 2.25h13.5A2.25 2.25 0 0 0 21 18V6.75M4.5 9h15m-12.75 3h10.5m-7.5 3h4.5'/></svg>",
+    goal: "Lower carbon emissions",
+    tip: "Use buses or group rides to decrease traffic and pollution.",
+    action: "Book group transport options."
+  },
+  {
+    img: Image5,    
+    title: "Sustainable Materials",
+    description: "Use prayer mats and garments made from organic, sustainable materials.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-indigo-500'><path stroke-linecap='round' stroke-linejoin='round' d='M7.5 3v18m9-18v18M5.25 6h13.5a1.5 1.5 0 0 1 1.5 1.5v9a1.5 1.5 0 0 1-1.5 1.5H5.25A1.5 1.5 0 0 1 3.75 16.5v-9A1.5 1.5 0 0 1 5.25 6z'/></svg>",
+    goal: "Use eco-friendly materials",
+    tip: "Opt for organic cotton or recycled materials.",
+    action: "Bring sustainably sourced items."
+  },
+  {
+    img: Image6,    
+    title: "Plant-Based Diet",
+    description: "Opt for local, plant-based meals to reduce waste and promote health.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-red-500'><path stroke-linecap='round' stroke-linejoin='round' d='M10.5 18.75h3m-8.25-5.25a6.75 6.75 0 1 1 13.5 0c0 3.475-3.866 5.3-6.75 5.25m6.75-4.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0z'/></svg>",
+    goal: "Reduce meat consumption",
+    tip: "Choose plant-based foods to lower your environmental impact.",
+    action: "Opt for local, plant-based meals."
+  },
+  {
+    img: Image7,    
+    title: "Encourage Others to Go Green",
+    description: "Share your eco-friendly practices with fellow pilgrims to raise awareness.",
+    icon: "<svg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-8 h-8 text-red-500'><path stroke-linecap='round' stroke-linejoin='round' d='M10.5 18.75h3m-8.25-5.25a6.75 6.75 0 1 1 13.5 0c0 3.475-3.866 5.3-6.75 5.25m6.75-4.5a1.5 1.5 0 1 0 3 0 1.5 1.5 0 0 0-3 0z'/></svg>",
+    goal: "Encouraging Others to Go Green",
+    tip: "Be friendly with others and share your thoughts on benefits of using greed products",
+    action: "Share your eco-friendly practices with fellow pilgrims to raise awareness."
+  }
+];
 </script>
 
 <template>
-    <div class="container mx-auto xl:max-w-screen-xl px-4">
-        <h1 class="text-center text-2xl mt-4">Green Hazz</h1>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-4">            
-            <!-- Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg p-4">                
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800"> Daily Green Goals</h3>
-                    <p class="text-sm text-gray-600 mt-2">Start each day with small actions: carry a reusable bottle, avoid single-use plastics, and use designated bins for all waste. Let’s make Hajj cleaner, step by step.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
+  <div class="container mx-auto px-4 py-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div v-for="(step, index) in steps" :key="index" class="bg-white border border-gray-200 rounded-lg shadow-md p-6 dark:bg-slate-800 dark:border-slate-700">
+        <!-- Image Section -->
+        <img :src="step.img" alt="Step Image" class="w-full h-40 object-cover mb-2">
+        
+        <!-- Title -->
+        <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">{{ step.title }}</h3>
+        
+        <!-- Description -->
+        <p class="text-gray-700 dark:text-gray-300 mb-4">{{ step.description }}</p>
 
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Eco-Friendly Packing Guide</h3>
-                    <p class="text-sm text-gray-600 mt-2">Pack smartly with eco-friendly items—biodegradable toiletries, reusable utensils, and solar chargers help reduce waste. Avoid excessive packaging and choose products that respect the environment.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Mindful Waste Tips</h3>
-                    <p class="text-sm text-gray-600 mt-2"> Do not leave litter behind. Use waste and recycling bins only, and carry a small bag for your trash in crowded areas. A clean Hajj keeps sacred spaces beautiful for all.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Save Every Drop</h3>
-                    <p class="text-sm text-gray-600 mt-2">Conserve water during wudu by using the right amount without excess. Avoid running water needlessly in public spaces. Saving water here means more resources for all.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Eco Score & Badges</h3>
-                    <p class="text-sm text-gray-600 mt-2">Track every eco-friendly action—whether it’s recycling, reusing, or conserving. Each choice counts toward a greener Hajj, and badges celebrate your progress!
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Offset Your Carbon Footprint</h3>
-                    <p class="text-sm text-gray-600 mt-2">Offset your travel emissions with options to plant trees or support renewable projects. Reducing our impact together makes a meaningful difference for our planet.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Community Eco-Impact</h3>
-                    <p class="text-sm text-gray-600 mt-2">Join fellow pilgrims in reaching shared eco-milestones: fewer plastic bottles, reduced litter, more recycling. Together, let’s show the world a more sustainable Hajj.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Green Teachings & Reflections</h3>
-                    <p class="text-sm text-gray-600 mt-2">Learn daily eco-tips inspired by Islamic teachings. Be a steward of the Earth by respecting resources and minimizing waste—it’s an essential part of our faith.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
-            <div class="bg-white rounded-lg shadow-lg p-4">
-                <div>
-                    <h3 class="text-lg font-semibold  text-gray-800">Green Transport Choices</h3>
-                    <p class="text-sm text-gray-600 mt-2">Choose shared or eco-friendly transport, and walk where possible to minimize emissions. Every sustainable travel choice helps preserve the environment for future pilgrims.
-                    </p>
-                </div>
-                <!-- Carousel -->
-                <div class="relative h-40 w-full mt-4">
-                    <img :src="currentImage" alt="Carousel Image" class="w-full h-full object-cover rounded-lg" />
-
-                    <!-- Navigation Buttons -->
-                    <button @click="prevSlide"
-                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ‹
-                    </button>
-                    <button @click="nextSlide"
-                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-1 rounded-full">
-                        ›
-                    </button>
-                </div>
-            </div>
+        <!-- Goal -->
+        <div class="mb-2">
+          <p class="text-sm font-semibold text-green-600 dark:text-green-400">Goal:</p>
+          <p class="text-gray-600 dark:text-gray-400">{{ step.goal }}</p>
         </div>
+
+        <!-- Tip -->
+        <div class="mb-2">
+          <p class="text-sm font-semibold text-blue-600 dark:text-blue-400">Tip:</p>
+          <p class="text-gray-600 dark:text-gray-400">{{ step.tip }}</p>
+        </div>
+
+        <!-- Action -->
+        <div>
+          <p class="text-sm font-semibold text-purple-600 dark:text-purple-400">Action:</p>
+          <p class="text-gray-600 dark:text-gray-400">{{ step.action }}</p>
+        </div>
+      </div>
     </div>
+  </div>
 </template>
+
