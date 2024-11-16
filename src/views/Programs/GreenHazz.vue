@@ -7,6 +7,14 @@ import Image5 from "@/assets/img/green/5.png";
 import Image6 from "@/assets/img/green/6.png";
 import Image7 from "@/assets/img/green/7.png";
 
+
+import { useRouter } from 'vue-router';
+  import BackButton from '@/components/BackButton.vue';
+    // back button 
+    const router = useRouter();
+    const goBack = () => {
+    router.back();
+};  
 const steps = [
   {         
     img: Image1,
@@ -75,6 +83,10 @@ const steps = [
 </script>
 
 <template>
+    <BackButton 
+        @backClick="goBack" 
+        class="mt-4 ml-3"
+    />
   <div class="container mx-auto px-4 py-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div v-for="(step, index) in steps" :key="index" class="bg-white border border-gray-200 rounded-lg shadow-md p-6 dark:bg-slate-800 dark:border-slate-700">

@@ -17,7 +17,7 @@ import RitualView from '@/views/Programs/RitualView.vue'
 import RepentenceView from '@/views/Spirituals/RepentenceView.vue'
 import CharityView from '@/views/Spirituals/CharityView.vue'
 import SupplicationView from '@/views/Spirituals/SupplicationView.vue'
-
+import BehaviorOutside from '@/views/Programs/BehaviorOutside.vue'
 
 
 
@@ -117,6 +117,11 @@ const router = createRouter({
       path: '/spiritual/supplication',
       name: 'spiritual-supplication',
       component: SupplicationView
+    },
+    {
+      path: '/programs/behavior',
+      name: 'programs-behavior',
+      component: BehaviorOutside
     },
 
 

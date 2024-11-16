@@ -65,6 +65,7 @@
         </div>
         <span class="text-sm text-green-200">Cultural Sensitivity and Reminders</span>
       </RouterLink>
+
       <RouterLink
         to="/programs/green"
         :class="[
@@ -79,6 +80,22 @@
         </div>
         <span class="text-sm text-green-200">Tracker for Eco-Conscious Pilgrims</span>
       </RouterLink>
+
+      <RouterLink
+        to="/programs/behavior"
+        :class="[
+          'bg-gray-800 text-white rounded-lg shadow-md hover:bg-gray-900',
+          'p-4',
+          'w-40',
+          'text-center'
+        ]"
+      >
+        <div class="flex flex-col items-center">
+            <p class="text-xl text-green-400">Behavioral outside etiquette </p>
+        </div>
+        <span class="text-sm text-green-200">Behavioral outside etiquette during hajj period</span>
+      </RouterLink>
+
       <RouterLink
         to="/programs/localized"
         :class="[
