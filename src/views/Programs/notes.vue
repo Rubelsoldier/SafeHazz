@@ -36,6 +36,10 @@ business opportunity of selling products
 
 ******************* pta token github is exposed publickly *************
 
+================= Quick change / edit / update ====================
+serial of steps broken from 4
+
+
 
 
 

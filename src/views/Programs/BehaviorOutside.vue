@@ -15,7 +15,6 @@
     />
     <h1 class="text-center text-2xl mt-4">Behavior Outside Etiquette</h1>
     <div class="container mx-auto p-4 grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-
         <div
             class="bg-gradient-to-r from-blue-50 to-blue-100 border border-blue-200 shadow-lg rounded-lg overflow-hidden">
             <img src="@/assets/img/behavior/1.png" alt="Ihram illustration" class="w-full h-40 cover">
