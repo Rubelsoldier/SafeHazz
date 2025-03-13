@@ -37,7 +37,7 @@ business opportunity of selling products
 ******************* pta token github is exposed publickly *************
 
 ================= Quick change / edit / update ====================
-serial of steps broken from 4
+adding a system to find elevator, bathroom, ozu khana. And how to wait, and give other space etc
 
 
 
