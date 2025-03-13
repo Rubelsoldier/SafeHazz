@@ -1,5 +1,5 @@
 <script setup>
-import Image1 from "@/assets/img/green/1.jpg";
+import Image1 from "@/assets/img/green/1.png";
 import Image2 from "@/assets/img/green/2.png";
 import Image3 from "@/assets/img/green/3.png";
 import Image4 from "@/assets/img/green/4.png";
@@ -87,11 +87,12 @@ const steps = [
         @backClick="goBack" 
         class="mt-4 ml-3"
     />
+  <h1 class="text-gray-200 text-center text-2xl mt-4">Green Hazz</h1>
   <div class="container mx-auto px-4 py-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       <div v-for="(step, index) in steps" :key="index" class="bg-white border border-gray-200 rounded-lg shadow-md p-6 dark:bg-slate-800 dark:border-slate-700">
         <!-- Image Section -->
-        <img :src="step.img" alt="Step Image" class="w-full h-40 object-cover mb-2">
+        <img :src="step.img" alt="Step Image" class="w-full  object-cover mb-2">
         
         <!-- Title -->
         <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-200 mb-2">{{ step.title }}</h3>
