@@ -1,6 +1,8 @@
 <script setup>
   import { useRouter } from 'vue-router';
   import BackButton from '@/components/BackButton.vue';
+  import GoToTop from "@/components/GoToTop.vue";
+
     // back button 
     const router = useRouter();
     const goBack = () => {
@@ -114,6 +116,8 @@
             </div>
         </div>        
 
+        <!-- Go to Top Button -->
+      <GoToTop />
     </div>
 </template>
 

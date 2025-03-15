@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, useRouter } from 'vue-router';
 import BackButton from '@/components/BackButton.vue';
+import GoToTop from "@/components/GoToTop.vue";
+
 // back button 
 const router = useRouter();
 const goBack = () => {
@@ -192,6 +194,8 @@ const goBack = () => {
 
             <!-- Repeat similar structure for other cards -->
         </div>
+        <!-- Go to Top Button -->
+        <GoToTop />
     </div>
 </template>
 

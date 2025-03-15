@@ -1,6 +1,6 @@
 <script setup>
 import { RouterLink, useRoute } from 'vue-router';
-import logo from '@/assets/img/logo.png';
+import logo from '@/assets/logo.png';
 
 const isActiveLink = (routePath) => {
   const route = useRoute();
@@ -9,13 +9,13 @@ const isActiveLink = (routePath) => {
 </script>
 
 <template>
-  <nav class="bg-green-700 border-b border-green-500">
+  <nav class="bg-green-700 border-b border-green-500 py-6 md:py-0">
     <div class="mx-auto max-w-full px-2 sm:px-6 lg:px-8">
       <div class="flex h-20 items-center justify-between">
-        <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
+        <div class="flex flex-1 items-center justify-center md:justify-start">
           <!-- Logo -->
           <RouterLink class="flex flex-shrink-0 items-center mr-4" to="/">
-            <img class="h-10 w-auto" :src="logo" alt="logo" />
+            <img class="h-20 w-auto" :src="logo" alt="logo" />
           </RouterLink>
           <div class="md:ml-auto flex space-x-2 flex-wrap">
             <RouterLink to="/" :class="[

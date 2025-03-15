@@ -7,6 +7,7 @@ import Image5 from "@/assets/img/green/5.png";
 import Image6 from "@/assets/img/green/6.png";
 import Image7 from "@/assets/img/green/7.png";
 
+import GoToTop from "@/components/GoToTop.vue";
 
 import { useRouter } from 'vue-router';
   import BackButton from '@/components/BackButton.vue';
@@ -119,6 +120,8 @@ const steps = [
         </div>
       </div>
     </div>
+    <!-- Go to Top Button -->
+    <GoToTop />
   </div>
 </template>
 
