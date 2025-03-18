@@ -18,7 +18,11 @@ import RepentenceView from '@/views/Spirituals/RepentenceView.vue'
 import CharityView from '@/views/Spirituals/CharityView.vue'
 import SupplicationView from '@/views/Spirituals/SupplicationView.vue'
 import BehaviorOutside from '@/views/Programs/BehaviorOutside.vue'
-
+import AccessibilityView from '@/views/AccessibilityView.vue'
+import Eyes from '@/views/Accessibility/Eyes.vue'
+import Vr from '@/views/Accessibility/Vr.vue'
+import Lost from '@/views/Accessibility/Lost.vue'
+import GlobalTranslator from '@/views/Accessibility/GlobalTranslator.vue'
 
 
 const router = createRouter({
@@ -33,6 +37,11 @@ const router = createRouter({
       path: '/programs',
       name: 'programs',
       component: ProgramsView
+    },
+    {
+      path: '/accessibility',
+      name: 'accessibility',
+      component: AccessibilityView
     },
     {
       path: '/about',
@@ -122,6 +131,31 @@ const router = createRouter({
       path: '/programs/behavior',
       name: 'programs-behavior',
       component: BehaviorOutside
+    },
+
+    // accessibility 
+    {
+      path: '/accessibility/eyes',
+      name: 'accessibility-eyes',
+      component: Eyes
+    },
+    // vr 
+    {
+      path: '/accessibility/vr',
+      name: 'accessibility-vr',
+      component: Vr
+    },
+    // lost
+    {
+      path: '/accessibility/lost',
+      name: 'accessibility-lost',
+      component: Lost
+    },
+    // global translator
+    {
+      path: '/accessibility/translator',
+      name: 'accessibility-translator',
+      component: GlobalTranslator
     },
 
 

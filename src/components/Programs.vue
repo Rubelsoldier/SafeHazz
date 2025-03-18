@@ -326,26 +326,6 @@ import { RouterLink } from 'vue-router';
 import GoToTop from "./GoToTop.vue";
 
 const showButton = ref(false);
-
-// Detect Scroll
-const handleScroll = () => {
-  showButton.value = window.scrollY > 300;
-};
-
-// Scroll to Top Function
-const scrollToTop = () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-};
-
-// Attach event listener
-onMounted(() => {
-  window.addEventListener("scroll", handleScroll);
-});
-
-// Cleanup event listener
-onUnmounted(() => {
-  window.removeEventListener("scroll", handleScroll);
-});
 </script>
 
 <style>
