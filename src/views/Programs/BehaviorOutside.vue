@@ -1,13 +1,33 @@
 <script setup>
   import { useRouter } from 'vue-router';
   import BackButton from '@/components/BackButton.vue';
-import GoToTop from "@/components/GoToTop.vue";
+  import GoToTop from "@/components/GoToTop.vue";
+  import { ref, onMounted, onUnmounted } from 'vue'
+  import emitter from '@/eventBus'
+
 
     // back button 
     const router = useRouter();
     const goBack = () => {
     router.back();
     };
+
+    // handling country selection 
+    const receivedCountry = ref(localStorage.getItem('selectedCountry') || 'No country selected yet')
+
+    const handleCountrySelected = (country) => {
+        receivedCountry.value = country
+        localStorage.setItem('selectedCountry', country) // Store the new country selection in localStorage
+    }
+
+    onMounted(() => {
+      emitter.on('country-selected', handleCountrySelected)
+    })
+
+    onUnmounted(() => {
+     emitter.off('country-selected', handleCountrySelected)
+    })
+
 </script>
 
 <template>
@@ -35,6 +55,7 @@ import GoToTop from "@/components/GoToTop.vue";
         </div>
         
         <div
+            v-if="receivedCountry=='India'"
             class="bg-gray-800 border-blue-200 shadow-lg rounded-lg overflow-hidden">
             <img src="@/assets/img/behavior/2.png" alt="Tawaf illustration" class="w-full  cover">
             <div class="p-6">
@@ -80,6 +101,7 @@ import GoToTop from "@/components/GoToTop.vue";
         </div>
 
         <div
+            v-if="receivedCountry == 'Nigeria'"
             class="bg-gray-800 border-blue-200 shadow-lg rounded-lg overflow-hidden">
             <img src="@/assets/img/behavior/5.png" alt="Sa'i illustration" class="w-full  cover">
             <div class="p-6">
@@ -93,6 +115,7 @@ import GoToTop from "@/components/GoToTop.vue";
         </div>
 
         <div
+            v-if="receivedCountry=='Japan'"
             class="bg-gray-800 border-blue-200 shadow-lg rounded-lg overflow-hidden">
             <img src="@/assets/img/behavior/6.png" alt="Sa'i illustration" class="w-full  cover">
             <div class="p-6">
